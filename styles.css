@@ -6,50 +6,104 @@
  }
  
  body {
-     background-color: #f4f4f9;
+     background-color: #f9f9fc;
      color: #333;
  }
  
- header.hero-section {
-     background: url('hero-bg.jpg') no-repeat center center/cover;
+ /* Navbar */
+ .navbar {
+     position: sticky;
+     top: 0;
+     background-color: #6a0dad; /* Purple color */
      color: #fff;
-     padding: 60px 0;
-     text-align: center;
+     padding: 15px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 10;
  }
  
- header h1 {
-     font-size: 2.5rem;
+ .navbar h1 {
+     font-size: 1.5rem;
+     margin: 0;
  }
  
- header p {
-     font-size: 1.2rem;
- }
- 
- nav a {
+ .nav-links a {
      color: #fff;
-     margin: 0 10px;
+     margin: 0 15px;
      text-decoration: none;
      font-weight: bold;
  }
  
- .services, .about, .contact {
+ .nav-links a:hover {
+     color: #f9f9fc; /* Light grey hover effect */
+ }
+ 
+ /* Hero Section */
+ .hero-section {
+     text-align: center;
+     position: relative;
+ }
+ 
+ .hero-image {
+     width: 100%;
+     height: auto;
+ }
+ 
+ .hero-section h2 {
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     color: #fff;
+     font-size: 1.8rem;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding: 10px 20px;
+     border-radius: 5px;
+ }
+ 
+ /* About Section */
+ .about {
+     padding: 40px 20px;
+     background-color: #f0e6fa; /* Light purple background */
+     text-align: center;
+ }
+ 
+ /* Services Section */
+ .services {
      padding: 40px 20px;
      text-align: center;
  }
  
  h2 {
      font-size: 2rem;
-     color: #222;
+     color: #6a0dad;
      margin-bottom: 20px;
  }
  
  .service-item {
-     padding: 20px;
+     display: inline-block;
+     width: 200px;
+     margin: 15px;
      background: #fff;
-     margin: 10px;
      border-radius: 8px;
+     overflow: hidden;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
  }
  
+ .service-item img {
+     width: 100%;
+     height: auto;
+ }
+ 
+ .service-item h3 {
+     background-color: #6a0dad;
+     color: #fff;
+     padding: 10px;
+     font-size: 1.2rem;
+ }
+ 
+ /* Contact Section */
  .contact form {
      display: flex;
      flex-direction: column;
@@ -65,8 +119,9 @@
      margin-top: 20px;
  }
  
+ /* Footer */
  footer {
-     background: #222;
+     background: #6a0dad;
      color: #fff;
      text-align: center;
      padding: 10px 0;
