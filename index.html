@@ -11,6 +11,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <h1>Kanmani Xerox Arni</h1>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-links">
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
@@ -54,7 +55,6 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-
         <div class="contact-info">
             <p><strong>Phone:</strong> +91 9566374666</p>
             <p><strong>Email:</strong> contact@kanmanixerox.com</p>
@@ -66,5 +66,12 @@
     <footer>
         <p>&copy; 2024 Kanmani Xerox. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show-menu');
+        }
+    </script>
 </body>
 </html>
