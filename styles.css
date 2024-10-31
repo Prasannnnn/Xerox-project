@@ -104,11 +104,15 @@
  }
  
  /* Contact Section */
+ .contact{
+    text-align: center;
+ }
  .contact form {
      display: flex;
      flex-direction: column;
      max-width: 500px;
      margin: auto;
+     text-align: center;
  }
  
  .contact form label, .contact form input, .contact form textarea, .contact form button {
@@ -117,6 +121,7 @@
  
  .contact-info {
      margin-top: 20px;
+     text-align: center;
  }
  
  /* Footer */
