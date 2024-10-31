@@ -30,25 +30,42 @@ body {
 
 .nav-links {
     display: flex;
+    gap: 15px;
 }
 
 .nav-links a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: #f9f9fc;
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
 }
 
-/* Toggle Button for Mobile */
-.nav-toggle {
-    font-size: 1.8rem;
-    color: #fff;
-    display: none;
-    cursor: pointer;
+.nav-links.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #6a0dad;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 /* Hero Section */
@@ -59,7 +76,8 @@ body {
 
 .hero-image {
     width: 100%;
-    height: 600px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .hero-section h2 {
@@ -68,7 +86,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
@@ -87,10 +105,8 @@ body {
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
+.services h2 {
     color: #6a0dad;
-    margin-bottom: 20px;
 }
 
 .service-item {
@@ -112,16 +128,16 @@ h2 {
     background-color: #6a0dad;
     color: #fff;
     padding: 10px;
-    font-size: 1.2rem;
 }
 
 /* Contact Section */
 .contact {
     text-align: center;
+    padding: 40px 20px;
 }
 
-.contact-info {
-    margin-top: 20px;
+.contact-info p {
+    margin: 10px 0;
 }
 
 /* Footer */
@@ -131,30 +147,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .navbar h1 {
-        font-size: 1.2rem;
-    }
-    .nav-links {
-        display: none; /* Hide links initially on mobile */
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-    .show-menu {
-        display: flex; /* Show links when toggled */
-    }
-    .nav-toggle {
-        display: block;
-    }
-    .hero-image {
-        height: 300px;
-    }
-    .service-item {
-        width: 100%;
-        margin: 10px 0;
-    }
 }

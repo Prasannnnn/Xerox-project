@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <h1>Kanmani Xerox Arni</h1>
-        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <button class="menu-toggle">&#9776;</button>
         <div class="nav-links">
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
@@ -19,13 +19,13 @@
         </div>
     </nav>
 
-    <!-- Full-Frame Image Section -->
+    <!-- Hero Section -->
     <header class="hero-section">
         <img src="Shop.png" alt="Kanmani Xerox Outlet" class="hero-image">
         <h2>Kanmani Xerox - உங்கள் முழுமையான பிரிண்டிங் கடை</h2>
     </header>
 
-    <!-- About Us Section in Tamil -->
+    <!-- About Section in Tamil -->
     <section id="about" class="about">
         <h2>About</h2>
         <p>Kanmani Xerox – உங்கள் சுற்று வட்டாரத்தில் தரமான பிரிண்டிங் மற்றும் பதிவேற்ற சேவைகளை வழங்கி வருகின்றோம். எங்களின் வேகமான மற்றும் நம்பகமான சேவைகள் எங்களை தனித்துவமாக்குகின்றன.</p>
@@ -62,16 +62,16 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kanmani Xerox. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Toggle Menu -->
     <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('show-menu');
-        }
+        // Toggle Navbar on Mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
     </script>
 </body>
 </html>
